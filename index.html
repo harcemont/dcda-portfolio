@@ -12,6 +12,7 @@
 <body>
     <!-- Navigation: Links to all portfolio pages -->
     <nav>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="lab02.html">AI Evaluation</a></li>
@@ -118,5 +119,19 @@
         <p><a href="https://github.com/harcemont/dcda-portfolio.git">View Repository on GitHub</a></p>
         <p>&copy; 2026 Hadley Arcemont | DCDA 40833 | TCU</p>
     </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        hamburger.addEventListener('click', function () {
+            const isOpen = nav.classList.toggle('nav-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+        document.querySelectorAll('nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                nav.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>

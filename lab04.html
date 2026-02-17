@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lab 4: Tableau Visualization — DCDA 40833 Skills Portfolio">
+    <meta name="author" content="Hadley Arcemont">
     <title>Tableau Visualization | Hadley Arcemont</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="lab02.html">Lab 2: AI Evaluation</a>
-            <a href="lab03.html">Lab 3: Visualization Critique</a>
-            <a href="lab04.html" class="active">Lab 4: Tableau Visualization</a>
-            <!-- Add more lab links as the semester progresses -->
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+                <li><a href="lab03.html">Lab 3: Tufte Critique</a></li>
+                <li><a href="lab04.html" class="active">Lab 4: Tableau Viz</a></li>
+                <li><a href="lab5.html">Lab 5</a></li>
+                <li><a href="hometown-map.html">Hometown Map</a></li>
+            </ul>
         </nav>
         <h1>Tableau Visualization</h1>
     </header>
@@ -42,7 +48,7 @@
             <h3>Surprises/Outliers</h3>
             <p>The biggest surprise was how different the top 10 lists were across categories, which challenges the assumption that high-risk states are the same in every category. Another surprise was how high the positive measures are. In the not distracted chart, the top 10 values were extremely high (96%-100%), and in the no previous accident history chart, the values were very similar (96%-100%). This made me wonder if these are all fatal crashes, why are so many drivers recorded as not distracted or having no prior accidents. Some outliers that stood out to me were District of Columbia at 100% for both not distracted and no prior accident history, and Mississippi at 100% no prior accident history. These outliers make me wonder about the sample size that was used and how these factors were defined. </p>
 
-            <h3>Questions for Furhter Investigation</h3>
+            <h3>Questions for Further Investigation</h3>
             <p>How were these factors defined when the data was collected? What counted as “speeding”, “alcohol-impaired”, “distracted”, and “no previous accidents”? Were the same definitions used consistently across all states?
             Are some states’ extreme percentages influenced by smaller sample sizes?
             Why does Hawaii rank high for both speeding and alcohol impairment? Could tourism, road type, or enforcement play a role?
@@ -54,9 +60,22 @@
     </main>
 
     <footer>
-        <p>© 2026 Hadley Arcemont <a href="https://github.com/harcemont/dcda-portfolio">GitHub</a>
+        <p>&copy; 2026 Hadley Arcemont | <a href="https://github.com/harcemont/dcda-portfolio">GitHub</a>
 </p>
     </footer>
-    
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        hamburger.addEventListener('click', function () {
+            const isOpen = nav.classList.toggle('nav-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+        document.querySelectorAll('nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                nav.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>

@@ -76,11 +76,17 @@ nav ul {
     list-style: none;           /* Remove bullets */
     padding: 0;                 /* Remove default padding */
     margin: 0;                  /* Remove default margin */
-    display: flex;              /* Arrange items horizontally */
     flex-direction: row;        /* Explicit: horizontal on desktop */
     justify-content: center;    /* Center the items */
     gap: 1rem;                  /* Space between items */
     flex-wrap: wrap;            /* Wrap on small screens */
+}
+
+/* Show nav list as flex row on desktop only */
+@media (min-width: 769px) {
+    nav ul {
+        display: flex;
+    }
 }
 
 nav li {
@@ -97,6 +103,19 @@ nav a {
 
 nav a:hover {
     background-color: var(--primary-color);
+}
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    background: none;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+    line-height: 1;
 }
 
 /* =========================
@@ -382,12 +401,32 @@ footer a:hover {
 
     nav {
         font-size: 0.9rem;
+        flex-direction: column;  /* Stack button and links vertically */
+        align-items: center;
+    }
+
+    /* Show hamburger button on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide nav links by default on mobile */
+    nav ul,
+    nav > a {
+        display: none;
+    }
+
+    /* Reveal links when menu is open */
+    nav.nav-open ul,
+    nav.nav-open > a {
+        display: flex;
     }
 
     /* Stack navigation vertically on mobile */
     nav ul {
         flex-direction: column;  /* Change from row to column */
         align-items: center;     /* Center the stacked items */
+        width: 100%;
     }
 
     nav a {

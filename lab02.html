@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lab 2: AI Experimentation — DCDA 40833 Skills Portfolio">
+    <meta name="author" content="Hadley Arcemont">
     <title>AI Experimentation | Hadley Arcemont</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="lab02.html" class="active">Lab 2: AI Experimentation</a>
-            <!-- Add more lab links as the semester progresses -->
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lab02.html" class="active">Lab 2: AI Experimentation</a></li>
+                <li><a href="lab03.html">Lab 3: Tufte Critique</a></li>
+                <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+                <li><a href="lab5.html">Lab 5</a></li>
+                <li><a href="hometown-map.html">Hometown Map</a></li>
+            </ul>
         </nav>
         <h1>AI Experimentation</h1>
     </header>
@@ -58,8 +66,6 @@
         </section>
 
             <!-- Add screenshots or examples, I added my screenshots under the experiment they were a part of to make my portfolio and storytelling flow better. -->
-            
-        </section>
 
         <section>
             <h2>What I Learned</h2>
@@ -76,5 +82,19 @@
         <p>&copy; 2026 Hadley Arcemont | <a href="https://github.com/harcemont/dcda-portfolio">GitHub</a>
 </p>
     </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        hamburger.addEventListener('click', function () {
+            const isOpen = nav.classList.toggle('nav-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+        document.querySelectorAll('nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                nav.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>
