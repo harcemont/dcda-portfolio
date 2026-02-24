@@ -12,6 +12,7 @@
     <header>
         <nav>
             <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <button class="nav-close" aria-label="Close navigation">&times;</button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="lab02.html" class="active">Lab 2: AI Experimentation</a></li>
@@ -82,13 +83,23 @@
         <p>&copy; 2026 Hadley Arcemont | <a href="https://github.com/harcemont/dcda-portfolio">GitHub</a>
 </p>
     </footer>
+    <script src="js/lightbox.js"></script>
+    <script src="js/scroll-to-top.js"></script>
     <script>
         const hamburger = document.querySelector('.hamburger');
+        const closeBtn = document.querySelector('.nav-close');
         const nav = document.querySelector('nav');
+        
         hamburger.addEventListener('click', function () {
             const isOpen = nav.classList.toggle('nav-open');
             hamburger.setAttribute('aria-expanded', isOpen);
         });
+        
+        closeBtn.addEventListener('click', function () {
+            nav.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+        
         document.querySelectorAll('nav a').forEach(function (link) {
             link.addEventListener('click', function () {
                 nav.classList.remove('nav-open');

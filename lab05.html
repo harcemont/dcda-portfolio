@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lab 5: Vibe Coding — DCDA 40833 Skills Portfolio">
+    <meta name="author" content="Hadley Arcemont">
+    <title>Vibe Coding | Hadley Arcemont</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <button class="nav-close" aria-label="Close navigation">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lab02.html">Lab 2: AI Experimentation</a></li>
+                <li><a href="lab03.html">Lab 3: Tufte Critique</a></li>
+                <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+                <li><a href="lab05.html" class="active">Lab 5: Vibe Coding</a></li>
+                <li><a href="hometown-map.html">Hometown Map</a></li>
+            </ul>
+        </nav>
+        <h1>Vibe Coding</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Technical Understanding</h2>
+            <p>In Lab 5, I used vibe coding where I described the three outcomes I wanted to the AI chat built into VS Code, and the AI generated them. The three features I added to my portfolio are thumbnails for all images that allow the user to enlarge them, a hamburger navigation menu that changes to an X that allows users to close it, and a scroll to the top arrow that appears after scrolling down on the page.
+
+            After accepting the AI-generated code, I went through and read all of the added lines and did my best to understand what each contributes to the overall function. I did some research on the side to try to figure out lines I was confused about. I then added honest comments throughout regarding my level of understanding. I would say that I understand about half of the code in terms of how the lines work together to achieve the outcomes. I can follow most of the logic and explain what the code is doing at a surface level, but none of these functions are things that I would have been able to code from scratch on my own without the chat assistance. 
+
+            During this process, I ran into a technical issue that I was not able to resolve. My headshot image on the home page does not enlarge like the rest of the images when I click on the thumbnail. I asked the chat and did my own research, but I still wasn’t able to troubleshoot the cause or fix it. This showed me that there are limits when vibe coding and adding features to an existing website. I compared the headshot code to the other images and did not recognize any differences that would be causing this issue. I think it would take further research and more experience for me to be able to understand what small issue in the code can affect the outcome. 
+</p>
+        </section>
+
+        <section>
+            <h2>Process Evaluation</h2>
+
+        <p>
+            AI was most helpful for me to add the different features to my portfolio website. AI was able to generate these features so quickly, which is something that I would not have been able to do on my own from scratch. This made the process much smoother because I was able to give it prompts and explain what I wanted, and then go back in and make adjustments when needed. It also helped me learn because I was able to read through the code and try to make sense of which lines were contributing which detail in the final product.  
+
+            Most of the outputs from AI needed some refinements. For the thumbnail images, I tried to troubleshoot to get my headshot to enlarge like the others, but that was unsuccessful. For the hamburger icon, I moved it to the right, removed the box around it, and changed the look so that the hamburger icon disappears and an X appears when the menu is opened. These changes made these features more user-friendly and overall made the design cleaner.
+            
+            The scroll-to-top arrow was the smoothest part of this process, and I did not make any refinements. I think this is because it was the last feature I added, so I had a better idea of how to prompt the AI with the exact outcome and details I wanted. 
+
+</p>
+        </section>
+
+        <section>
+            <h2>Ethical & Pedagogical Considerations</h2>
+
+        <p>
+            This lab made it very clear to me that vibe coding can really help me learn and enhance my skills as long as I take the time to understand the output. During this lab, vibe coding allowed me to include features in my portfolio website that I would not have been able to implement on my own. It also allowed me to have the chance to determine what lines I understand, and what lines need more research. I think a very important step of this lab was commenting on the code honestly and realizing that I do not have to understand every detail that goes into the final product. 
+            
+            I think that the biggest trade-off is that AI can make it easy to only use a prompt and move on. I think it is important to take the original output as a test run, see what could improve, and what could enhance it. Then take the next steps to refine it until you are pleased with the final product. My unresolved headshot issue is a reminder to myself that we cannot fully rely on AI. We need to check its work, understand the issue, and figure out how to resolve it. Unfortunately, I was not able to, but this is something that I believe will take time to understand.  
+            
+            For attribution, I think transparency is the most important aspect when using AI-generated code. I want to make it very clear in my portfolio that I used AI-generated code to help enhance the overall look, feel, and usability. My personal guidelines are to use AI to generate starting points, explanations, or more difficult tasks. My overall goal with using AI to generate code is to help me learn and understand, so one day I will be able to write it on my own. 
+</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hadley Arcemont | <a href="https://github.com/harcemont/dcda-portfolio">GitHub</a>
+</p>
+    </footer>
+    <script src="js/lightbox.js"></script>
+    <script src="js/scroll-to-top.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const closeBtn = document.querySelector('.nav-close');
+        const nav = document.querySelector('nav');
+        
+        hamburger.addEventListener('click', function () {
+            const isOpen = nav.classList.toggle('nav-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+        
+        closeBtn.addEventListener('click', function () {
+            nav.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+        
+        document.querySelectorAll('nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                nav.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

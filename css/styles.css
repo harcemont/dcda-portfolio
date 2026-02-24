@@ -105,17 +105,47 @@ nav a:hover {
     background-color: var(--primary-color);
 }
 
+/*Comment: I understand that the code below allows the hamburger to appear when the length of the portfolio website decreases. I also understand that the code below allows the hamburger icon to disappear when the menu it open and an X is displayed instead to allow viewers to close the menu. However, I could not have coded this on my own without the assistance of the chat.//
 /* Hamburger button — hidden on desktop */
 .hamburger {
     display: none;
     background: none;
-    border: 2px solid white;
-    border-radius: 4px;
+    border: none;
     color: white;
-    font-size: 1.25rem;
-    padding: 0.25rem 0.6rem;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
     cursor: pointer;
     line-height: 1;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Hide hamburger when menu is open */
+nav.nav-open .hamburger {
+    display: none;
+}
+
+/* Close button for mobile menu */
+.nav-close {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    line-height: 1;
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    z-index: 101;
+}
+
+/* Show close button only when menu is open */
+nav.nav-open .nav-close {
+    display: block;
 }
 
 /* =========================
@@ -180,7 +210,8 @@ main section li {
 }
 
 .viz-container img {
-    max-width: 100%;           /* Responsive: never wider than container */
+    max-width: 300px;          /* Show as thumbnail */
+    width: 100%;               /* Responsive within max-width */
     height: auto;              /* Maintain aspect ratio */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -403,6 +434,7 @@ footer a:hover {
         font-size: 0.9rem;
         flex-direction: column;  /* Stack button and links vertically */
         align-items: center;
+        position: relative;      /* For absolute positioning of hamburger */
     }
 
     /* Show hamburger button on mobile */
@@ -445,6 +477,89 @@ footer a:hover {
 }
 
 /* =========================
+   Image Lightbox
+   ========================= */
+/* Make images clickable thumbnails */
+main img[src*="images/"],
+.viz-container img {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+main img[src*="images/"]:hover,
+.viz-container img:hover {
+    opacity: 0.85;
+}
+
+/* Modal overlay */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+/* Large centered image - use !important to override any other styles */
+.lightbox-content {
+    max-width: 90% !important;
+    max-height: 90vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Close button (X) */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: var(--accent-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =========================
    Print Styles (Optional)
    ========================= */
 @media print {
@@ -456,4 +571,49 @@ footer a:hover {
         box-shadow: none;
         page-break-inside: avoid;
     }
+    
+    .lightbox-modal {
+        display: none !important;
+    }
+    
+    .scroll-to-top {
+        display: none !important;
+    }
+}
+/* I understand that this code allows the portfolio website to look clean and cohesive. However, I am not sure how this code works together and would not have been able to do this without the assistance of the chat.//
+/* =========================
+   Scroll to Top Button
+   ========================= */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-to-top:active {
+    transform: translateY(-1px);
 }
