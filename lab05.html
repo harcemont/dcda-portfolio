@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lab 5: Vibe Coding — DCDA 40833 Skills Portfolio">
+    <meta name="author" content="Hadley Arcemont">
+    <title>Vibe Coding | Hadley Arcemont</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <button class="nav-close" aria-label="Close navigation">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lab02.html">Lab 2: AI Experimentation</a></li>
+                <li><a href="lab03.html">Lab 3: Tufte Critique</a></li>
+                <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+                <li><a href="lab05.html" class="active">Lab 5: Vibe Coding</a></li>
+                <li><a href="hometown-map.html">Hometown Map</a></li>
+            </ul>
+        </nav>
+        <h1>Vibe Coding</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>What I Built with AI Assistance</h2>
+            <p>In my Lab 5, I used AI assistance to vibe code and enhance my portfolio with three different features. The first feature I wanted to add to my portfolio was a clickable thumbnail for all of my images. Most of my images can be clicked on to open a larger version and include different ways to escape the image. The second feature I wanted to add to my portfolio was the hamburger menu to make my portfolio more user-friendly on smaller screens. When the user clicks on the hamburger icon, it opens the menu, and the hamburger icon switches to an X to close the menu. The last feature I wanted to add to my portfolio was a scroll-to-top arrow. When users scroll down the page, an up-arrow appears in the bottom right. When clicked, the website smoothly scrolls back to the top. 
+            I used the AI chat integrated in Visual Studio Code to generate the code for these features. I then went in and reviewed the code, added comments about my understanding of the lines, and made adjustments to ensure the features performed how I wanted. 
+</p>
+        </section>
+
+        <figure>
+              <img src="images/thumbnail.jpg" alt="Thumbnail image enlarged." width="85%">
+             <figcaption>Thumbnail Click-to-Enlarge Image</figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/hamburger.jpg" alt="Hamburger menu open with X escape option." width="85%">
+             <figcaption>Mobile Hamburger Navigation Menu</figcaption>
+        </figure>
+
+        <figure>
+              <img src="images/arrow.jpg" alt="Scroll to top arrow." width="85%">
+             <figcaption>Scroll-to-Top Arrow Button</figcaption>
+        </figure>
+
+        <section>
+            <h2>My Understanding of the Code
+</h2>
+
+        <p>
+            After including these features in my portfolio website, I went through and added honest comments regarding my level of understanding using the Understanding Spectrum. I would say that I understand about half the code in terms of how the lines work together to achieve the outcome. I can follow most of the logic and explain what the code is doing at a surface level, but none of these functions are things that I would have been able to code from scratch on my own without the chat assistance.
+            I also want to highlight an unresolved issue. My headshot image on the home page does not enlarge like the rest of my thumbnails when it is clicked. I did personal research, compared that image to the others, and asked the chat. However, I was not able to troubleshoot it, so this remains something I still do not understand. I think it will take time for me to understand how such a small detail can have such a large effect on the outcome 
+</p>
+        </section>
+
+        <section>
+            <h2>My Guidelines</h2>
+
+        <p>
+            My main guideline for using AI Assistance is transparency. If I use AI-generated code, I want it to be very clear in my portfolio what AI contributed and what I changed myself. I plan to use AI as a support tool to generate starting points, get explanations when I’m confused, and help with more difficult tasks that I wouldn’t be able to complete on my own yet. Overall, my goal with AI-assisted coding is to learn and understand, not just get a result. I will make myself read through the code, make honest comments on what I understand, and work through the parts I don’t so that eventually I can write similar features on my own.
+</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hadley Arcemont | <a href="https://github.com/harcemont/dcda-portfolio">GitHub</a>
+</p>
+    </footer>
+    <script src="js/lightbox.js"></script>
+    <script src="js/scroll-to-top.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const closeBtn = document.querySelector('.nav-close');
+        const nav = document.querySelector('nav');
+        
+        hamburger.addEventListener('click', function () {
+            const isOpen = nav.classList.toggle('nav-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+        
+        closeBtn.addEventListener('click', function () {
+            nav.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+        
+        document.querySelectorAll('nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                nav.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

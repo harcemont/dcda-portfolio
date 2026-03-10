@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lab 6: Hometown Map — DCDA 40833 Skills Portfolio">
+    <meta name="author" content="Hadley Arcemont">
+    <title>Vibe Coding | Hadley Arcemont</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <button class="nav-close" aria-label="Close navigation">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lab02.html">Lab 2: AI Experimentation</a></li>
+                <li><a href="lab03.html">Lab 3: Tufte Critique</a></li>
+                <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+                <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
+                <li><a href="hometown_map.html"class="active">Lab 6: Hometown Map</a></li>
+            </ul>
+        </nav>
+        <h1>Hometown Map</h1>
+    </header>
+    <h2>Reflection</h2>
+    <iframe 
+     src="hometown_map.html"
+      width="85%" 
+      height="650"></iframe>
+    </iframe>
+
+    <main>
+        <section>
+            <h2>Reflection</h2>
+            <p>My basemap design was inspired by the Barbie movie, specificaly the bright, playful aesthetic and the incorporation of pink. I found a Barbie-inspired color palette that matched my vibe and also fit the look of my portfolio, and then incorporated those colors into the map by making the featured styled and aesthetic instead of realistic. I really wanted to keep my map fun and cohesive because I think that reflects my personality more than if I were to make a typical map. 
+
+        <figure>
+              <img src="images/BarbeInspo.jpg" alt="Thumbnail image enlarged." width="35%">
+        </figure>
+
+            The biggest cartographic challenge was figuring out how to edit the features correctly to maintain the style and aesthetics of my map while still being functional. I quickly realizd that when the map was zoomed out, too many features made the map look cluttered and distracted from the aesthetic. Because of this, I simplified the features by making them appear when zoomed in. I prioritized highlighting the large visual like land and water while zoomed out on the map and avoided extra details. As the user zooms in, they can see the details like the roads and smaller cities. I also wanted to make the line weight thinner so the map maintained aesthetic and not overwhelming. 
+            Terrain was also a big challenge for me. I couldn’t find a terrain visualization layer in the normal layers or components area, and the only terrain option I found was in the global section as 3D terrain. I enabled it and was able to reflect the terrain on my map; however, I am still unsure if that is different from the hillshade and contour terrain component. This caused me to make a judgment call and document it honestly as part of my design process.
+
+            Technically, the hardest part was building and troubleshooting my CSV file and Python script. I ran into many issues with my CSV. I troubleshooted my file formatting for awhile and finally figured it out. I also had an issue with formatting and encoding at the end when I previewed my final map. It was showing weird symbols which quickly made me realize that I cannot use ‘ in contractions. I went through and made these edits and it fixed that problem. I used ChatGPT throughout to help me write my code, debug any issues I came across, and fix my CSV so it could be read correctly. I also used it to put my own personal touch on my map by adding heart markers instead of the typical map location icon. ChatGPT helped me a lot in this process, not only to help write the code by to help me troubleshoot and issues I came across. This allowed me to move through this lab quicker than if I were to troubleshoot this fully on my own. 
+
+        </section>
+
+<footer>
+        <p>&copy; 2026 Hadley Arcemont | <a href="https://github.com/harcemont/dcda-portfolio">GitHub</a>
+</p>
+    </footer>
+    <script src="js/lightbox.js"></script>
+    <script src="js/scroll-to-top.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const closeBtn = document.querySelector('.nav-close');
+        const nav = document.querySelector('nav');
+        
+        hamburger.addEventListener('click', function () {
+            const isOpen = nav.classList.toggle('nav-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+        
+        closeBtn.addEventListener('click', function () {
+            nav.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+        
+        document.querySelectorAll('nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                nav.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

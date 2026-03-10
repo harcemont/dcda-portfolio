@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a391d8ca5ab15758e1fae8a9959075e2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a391d8ca5ab15758e1fae8a9959075e2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a391d8ca5ab15758e1fae8a9959075e2 = L.map(
+                "map_a391d8ca5ab15758e1fae8a9959075e2",
+                {
+                    center: [33.053158999999994, -96.8092517],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8b36a261bdab2a2a435ebde3b25ffcd1 = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/harcemont/cmm9luxv700zp01s3hct73hae/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaGFyY2Vtb250IiwiYSI6ImNtMXpsdG1zYjA4bGsya3B4eHN3ODNsangifQ.b-O9MIHMPExCoxlkwd8-6w",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Mapbox",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+  "tilesize": 256,
+}
+
+            );
+        
+    
+            tile_layer_8b36a261bdab2a2a435ebde3b25ffcd1.addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var marker_404f76960d9ec1300a72d7e44c362b25 = L.marker(
+                [33.04745, -96.8487],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_a82a0d516601386b04cadd4000e6a43a = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_5a1e9dab2485d1260434972bb8924ccf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df98bdd9493f98a011f9c7b19d12b4b9 = $(`<div id="html_df98bdd9493f98a011f9c7b19d12b4b9" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">Arbor Hills Nature Preserve</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">I love walking this trail and just being in nature for a little while. I come here to clear my head, and a lot of times I will bring my dog or go with friends</p>         <img src="https://sayyestodallas.com/wp-content/uploads/2017/02/Plano-West-Plano-Arbor-Hills-Park-2015-13.jpg" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Park</p>     </div>     </div>`)[0];
+                popup_5a1e9dab2485d1260434972bb8924ccf.setContent(html_df98bdd9493f98a011f9c7b19d12b4b9);
+            
+        
+
+        marker_404f76960d9ec1300a72d7e44c362b25.bindPopup(popup_5a1e9dab2485d1260434972bb8924ccf)
+        ;
+
+        
+    
+    
+                marker_404f76960d9ec1300a72d7e44c362b25.setIcon(div_icon_a82a0d516601386b04cadd4000e6a43a);
+            
+    
+            var marker_6d7f8f871254321d67b2691443d78a1c = L.marker(
+                [33.07861, -96.827452],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_d1b574cb20ad1eec1d5ab856b092b90d = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_67eb51f631c6dccf7116e7167f6525e1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2d5388c0c528b6e0d40de73b60f6eb66 = $(`<div id="html_2d5388c0c528b6e0d40de73b60f6eb66" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">Bulla Gastrobar Plano</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">This is honestly one of my favorite restaurants of all time. The tapas and sangria are always amazing, and their happy hour is seriously one of the best.</p>         <img src="https://tse1.mm.bing.net/th/id/OIP.65CLaHSs3n8yJ1ovZD6A5gAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Restaurant </p>     </div>     </div>`)[0];
+                popup_67eb51f631c6dccf7116e7167f6525e1.setContent(html_2d5388c0c528b6e0d40de73b60f6eb66);
+            
+        
+
+        marker_6d7f8f871254321d67b2691443d78a1c.bindPopup(popup_67eb51f631c6dccf7116e7167f6525e1)
+        ;
+
+        
+    
+    
+                marker_6d7f8f871254321d67b2691443d78a1c.setIcon(div_icon_d1b574cb20ad1eec1d5ab856b092b90d);
+            
+    
+            var marker_b09484ca9d61effd051c222b327fe2af = L.marker(
+                [33.026453, -96.788938],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_315ab1168028ffa77f53207470aa0ed9 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_0c43ed9446ad203827cab05f6dfd73c3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_91ed98da1fba97eace13137207f75002 = $(`<div id="html_91ed98da1fba97eace13137207f75002" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">Katy Trail Ice House Outpost</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">This is such a fun indoor and outdoor place with good bar food and drinks. It is a go to spot when I am with friends and we want to watch a game and hang out.</p>         <img src="https://planomagazine.com/wp-content/uploads/2017/05/Best-Patios-Katy-Trail-Icehouse-Outpost-Plano-Magazine.jpg" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Restaurant </p>     </div>     </div>`)[0];
+                popup_0c43ed9446ad203827cab05f6dfd73c3.setContent(html_91ed98da1fba97eace13137207f75002);
+            
+        
+
+        marker_b09484ca9d61effd051c222b327fe2af.bindPopup(popup_0c43ed9446ad203827cab05f6dfd73c3)
+        ;
+
+        
+    
+    
+                marker_b09484ca9d61effd051c222b327fe2af.setIcon(div_icon_315ab1168028ffa77f53207470aa0ed9);
+            
+    
+            var marker_9cac3bb287d67f0ec0faf92827a80228 = L.marker(
+                [33.030212, -96.7956],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_7ff8905ba4a305d01212851d18e2746c = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_124769a65fb264b6dba88254ac22eaf6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8c6ca6628c52118c23f1c43fdbc01b08 = $(`<div id="html_8c6ca6628c52118c23f1c43fdbc01b08" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">La La Land</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">Lala Land has the best coffee and breakfast and it literally never disappoints. It is one of those places I always crave, especially when I want something quick but still really good.</p>         <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_959,q_75,w_1200/v1/clients/dallasites101/temp_e2c7e683-e7f9-4263-b2fb-78ad29de916d.jpg" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Restaurant </p>     </div>     </div>`)[0];
+                popup_124769a65fb264b6dba88254ac22eaf6.setContent(html_8c6ca6628c52118c23f1c43fdbc01b08);
+            
+        
+
+        marker_9cac3bb287d67f0ec0faf92827a80228.bindPopup(popup_124769a65fb264b6dba88254ac22eaf6)
+        ;
+
+        
+    
+    
+                marker_9cac3bb287d67f0ec0faf92827a80228.setIcon(div_icon_7ff8905ba4a305d01212851d18e2746c);
+            
+    
+            var marker_85d6cf6b7cad35a3ff6e279e60699809 = L.marker(
+                [33.031181, -96.794211],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_ecb1063225a0d935ded70ca76ac35011 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_9ecf7db5a6dc545570ec9407fea90203 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6b0fdae4b3f7ff773276dc799484037b = $(`<div id="html_6b0fdae4b3f7ff773276dc799484037b" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">Luna Grill Plano</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">Luna Grill is my favorite when I want something quick but still healthy and refreshing. It is Mediterranean, so it always feels lighter, and I know I will leave satisfied. </p>         <img src="https://tse4.mm.bing.net/th/id/OIP.M9jXq97jbu0qgzWEw4XE6wAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Restaurant </p>     </div>     </div>`)[0];
+                popup_9ecf7db5a6dc545570ec9407fea90203.setContent(html_6b0fdae4b3f7ff773276dc799484037b);
+            
+        
+
+        marker_85d6cf6b7cad35a3ff6e279e60699809.bindPopup(popup_9ecf7db5a6dc545570ec9407fea90203)
+        ;
+
+        
+    
+    
+                marker_85d6cf6b7cad35a3ff6e279e60699809.setIcon(div_icon_ecb1063225a0d935ded70ca76ac35011);
+            
+    
+            var marker_5fb028293e87c669e5d0bcfc2cdd3874 = L.marker(
+                [33.07845, -96.82116],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_8ef61ee9a9ce0c1ec3d218112ea0c09b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_691512063bf5151f0f6e753d0a12b39d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_809d5845e6aff4d6464146c486bd41d5 = $(`<div id="html_809d5845e6aff4d6464146c486bd41d5" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">The Shops at Legacy</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">The Shops at Legacy has so much good shopping, from name brands to cute boutiques. I also love that it is all walkable, so it is fun to just park and wander around.</p>         <img src="https://images.squarespace-cdn.com/content/v1/60088e464721af48e3a5917a/f689e6f9-43d2-43e7-93a5-fc124cc8daa7/the-shops-at-legacy-0333-2.jpg" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Shopping</p>     </div>     </div>`)[0];
+                popup_691512063bf5151f0f6e753d0a12b39d.setContent(html_809d5845e6aff4d6464146c486bd41d5);
+            
+        
+
+        marker_5fb028293e87c669e5d0bcfc2cdd3874.bindPopup(popup_691512063bf5151f0f6e753d0a12b39d)
+        ;
+
+        
+    
+    
+                marker_5fb028293e87c669e5d0bcfc2cdd3874.setIcon(div_icon_8ef61ee9a9ce0c1ec3d218112ea0c09b);
+            
+    
+            var marker_36229e056fdfec50591a461d4b48b74c = L.marker(
+                [33.083169, -96.825847],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_b8809b4e6d3bfb67f73a3ec08db38bea = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_ca7e33312c1f034093cfdbbb1b3fc7ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05e8c999e064fba6a47b062e0ee28795 = $(`<div id="html_05e8c999e064fba6a47b062e0ee28795" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">Legacy Hall</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">Legacy Hall is one of my favorite places because there are so many different restaurants, desserts, and drinks all in one spot. The outdoor area is so fun on weekends with live music, and sometimes they even have concerts or special events.</p>         <img src="https://th.bing.com/th/id/R.e7ab255e5683fb8b2a6cfffbbe7c5a9d?rik=CrYxEwFFDdmOzw&riu=http%3a%2f%2fplanomagazine.com%2fwp-content%2fuploads%2f2018%2f07%2fbox-garden-plano-magazine-tim-sporcic.jpg&ehk=ha3tZ4U8N51o5z7jurtg9tt5EUU4QUxKdJG9up6Mbt4%3d&risl=&pid=ImgRaw&r=0" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Entertainment</p>     </div>     </div>`)[0];
+                popup_ca7e33312c1f034093cfdbbb1b3fc7ac.setContent(html_05e8c999e064fba6a47b062e0ee28795);
+            
+        
+
+        marker_36229e056fdfec50591a461d4b48b74c.bindPopup(popup_ca7e33312c1f034093cfdbbb1b3fc7ac)
+        ;
+
+        
+    
+    
+                marker_36229e056fdfec50591a461d4b48b74c.setIcon(div_icon_b8809b4e6d3bfb67f73a3ec08db38bea);
+            
+    
+            var marker_02835926cde42534778ef01de47400ad = L.marker(
+                [33.055569, -96.772869],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_29367970626c6e71647df2126fd3ad17 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_03441e6275754a99162ac778495f2cb8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a4d059a6f8fef641093579c5727b6b17 = $(`<div id="html_a4d059a6f8fef641093579c5727b6b17" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">YoYo Nails Spa</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">Yoyo Nail Spa does the best nails and I can always trust them. I have been going here for years, and it is one of those places I recommend because they are consistently good.</p>         <img src="https://www.yoyonailsspa.com/wp-content/uploads/2024/07/20240723-103727-768x1024.png" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Local Business</p>     </div>     </div>`)[0];
+                popup_03441e6275754a99162ac778495f2cb8.setContent(html_a4d059a6f8fef641093579c5727b6b17);
+            
+        
+
+        marker_02835926cde42534778ef01de47400ad.bindPopup(popup_03441e6275754a99162ac778495f2cb8)
+        ;
+
+        
+    
+    
+                marker_02835926cde42534778ef01de47400ad.setIcon(div_icon_29367970626c6e71647df2126fd3ad17);
+            
+    
+            var marker_0a2524ccde12da365b4253087b95769e = L.marker(
+                [33.075497, -96.821728],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_5b00894e1f38cb499ed62c435f16dbfe = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_d3b20552ff3809a3cfb1ffaa5809d2d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a91280ce4de221fb12fe27fbf8039447 = $(`<div id="html_a91280ce4de221fb12fe27fbf8039447" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">Truluck's Ocean's Finest Seafood and Crab</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">Trulucks is my go-to for a date night or a nice dinner when I want it to feel special. The seafood is amazing, the vibes are so good, and the drinks never miss. Honestly you cannot go wrong with anything you order.</p>         <img src="https://trulucks.com/wp-content/uploads/2019/09/IMG_5068-scaled.jpg" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Restaurant </p>     </div>     </div>`)[0];
+                popup_d3b20552ff3809a3cfb1ffaa5809d2d0.setContent(html_a91280ce4de221fb12fe27fbf8039447);
+            
+        
+
+        marker_0a2524ccde12da365b4253087b95769e.bindPopup(popup_d3b20552ff3809a3cfb1ffaa5809d2d0)
+        ;
+
+        
+    
+    
+                marker_0a2524ccde12da365b4253087b95769e.setIcon(div_icon_5b00894e1f38cb499ed62c435f16dbfe);
+            
+    
+            var marker_a7afca6fad9ed6d2fb5a9065ecb9a4ab = L.marker(
+                [33.024999, -96.796012],
+                {
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+        
+    
+            var div_icon_b6e71b24f99de823ddea0b5f00de57cc = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            font-size: 22px;\n            color: white;\n            text-shadow: 0 0 3px rgba(0,0,0,0.45);\n        \"\u003e\ud83e\udd0d\u003c/div\u003e\n        ",
+  "iconSize": [24, 24],
+  "iconAnchor": [12, 12],
+  "className": "empty",
+});
+        
+    
+        var popup_5c2c72cbf400c4151d3f393588a669f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_917899dde650974bac7c7a04c66d3c70 = $(`<div id="html_917899dde650974bac7c7a04c66d3c70" style="width: 100.0%; height: 100.0%;">     <div style="width: 260px;">         <h4 style="margin-bottom: 6px;">Madabolic</h4>         <p style="margin-top: 0; font-size: 13px; line-height: 1.3;">This is my favorite place to work out because it is a quick one hour class and it actually feels productive. I always leave feeling accomplished, like I did something good for myself even on a busy day.</p>         <img src="https://tse4.mm.bing.net/th/id/OIP.i3mAxEcdp9310iA73NPcwQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" style="width: 100%; border-radius: 8px;" />         <p style="font-size: 11px; color: #666; margin-top: 6px;">Type: Fitness</p>     </div>     </div>`)[0];
+                popup_5c2c72cbf400c4151d3f393588a669f0.setContent(html_917899dde650974bac7c7a04c66d3c70);
+            
+        
+
+        marker_a7afca6fad9ed6d2fb5a9065ecb9a4ab.bindPopup(popup_5c2c72cbf400c4151d3f393588a669f0)
+        ;
+
+        
+    
+    
+                marker_a7afca6fad9ed6d2fb5a9065ecb9a4ab.setIcon(div_icon_b6e71b24f99de823ddea0b5f00de57cc);
+            
+    
+            var layer_control_a8340875489a413282ac45a1718acfd6_layers = {
+                base_layers : {
+                    "Custom Basemap" : tile_layer_8b36a261bdab2a2a435ebde3b25ffcd1,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_a8340875489a413282ac45a1718acfd6 = L.control.layers(
+                layer_control_a8340875489a413282ac45a1718acfd6_layers.base_layers,
+                layer_control_a8340875489a413282ac45a1718acfd6_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_a391d8ca5ab15758e1fae8a9959075e2);
+
+        
+</script>
+</html>
